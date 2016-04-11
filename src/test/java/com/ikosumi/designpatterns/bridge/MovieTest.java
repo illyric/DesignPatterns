@@ -1,10 +1,12 @@
 package com.ikosumi.designpatterns.bridge;
 
+import org.junit.Test;
+
 public class MovieTest {
+    private Movie movie = new Movie("Fight Club", "1995", "Action", "2.31 h");
 
-    public static void main(String[] args) {
-        Movie movie = new Movie("Fight Club", "1995", "Action", "2.31 h");
-
+    @Test
+    public void testPrintFormatter() {
         Formatter printFormatter = new PrintFormatter();
         Printer movePrinter = new MoviePrinter(movie);
         String printedMaterial = movePrinter.print(printFormatter);
