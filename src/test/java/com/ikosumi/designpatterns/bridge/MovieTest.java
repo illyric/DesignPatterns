@@ -12,4 +12,12 @@ public class MovieTest {
         String printedMaterial = movePrinter.print(printFormatter);
         System.out.println(printedMaterial);
     }
+
+    @Test
+    public void testHtmlFormatter() {
+        Formatter htmlFormatter = new HtmlFormatter();
+        Printer printer = new MoviePrinter(movie);
+        String htmlOutput = printer.print(htmlFormatter);
+        System.out.println(htmlOutput);
+    }
 }
